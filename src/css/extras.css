@@ -1,0 +1,56 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+svg{
+    stroke-width: 1.6px;
+}
+
+button:hover{
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.sumar{
+  animation-duration: 3s;
+  animation-name: sumar;
+  animation-direction: alternate;
+  animation-iteration-count:infinite;
+}
+
+.restar{
+    animation-duration: 3s;
+    animation-name: restar;
+    animation-direction: alternate;
+    animation-iteration-count:infinite;
+  }
+
+@keyframes restar {
+    
+    0% {
+        background-color: rgb(255 255 255 );
+    }
+    50% {
+        background-color: rgb(185 28 28);
+    }
+    100% {
+        background-color: rgb(255 255 255 );
+    }
+}
+
+
+@keyframes sumar {
+    0% {
+        background-color: rgb(255 255 255 );
+    }
+    50% {
+        background-color: rgb(74 222 128);
+    }
+    100% {
+        background-color: rgb(255 255 255 );
+    }
+}
+

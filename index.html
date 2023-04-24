@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
+  <link href="/src/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/css/extras.css" />
+  <link rel="stylesheet" href="/node_modules/izitoast/dist/css/iziToast.min.css" />
+  <link rel="stylesheet" href="/node_modules/alertifyjs/build/css/alertify.min.css" />
+  <link rel="stylesheet" href="/node_modules/alertifyjs/build/css/themes/default.rtl.min.css" />
+  
+</head>
+
+<body>
+  <div id="overlay" class="fixed invisible z-30 w-full h-full bg-black/25 top-0"></div>
+  <div class="fixed w-full top-0 z-40">
+    <div id="fondo_menu"
+      class="absolute top-0 bg-gray-900/50 backdrop-blur-xl backdrop-brightness-150 backdrop-contrast-100 backdrop-saturate-150 -z-10 w-full h-full m-0">
+    </div>
+    <nav class="w-full">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button id="open_menu" type="button"
+              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+              <svg class="block h-6 w-6" id="hamb_on" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+              <svg class="hidden h-6 w-6" id="hamb_off" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex flex-shrink-0 items-center">
+              <img class="block h-8 w-auto lg:hidden"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
+              <img class="hidden h-8 w-auto lg:block"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                  aria-current="page">Dashboard</a>
+
+                <a href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
+
+                <a href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+
+                <a href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <!---bg-gray-800--->
+            <button type="button"
+              class="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              <span class="sr-only">View notifications</span>
+              <img src="src/interface/cart.png" alt="" srcset="" width="25" />
+            </button>
+
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+              <div>
+                <!--bg-gray-800-->
+                <button type="button" id="menu_usuario"
+                  class="flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                  <span class="sr-only">Open user menu</span>
+                  <img class="h-8 w-8 rounded-full pointer-events-none" src="src/user_imagenes/default.svg" alt="" />
+                </button>
+              </div>
+
+              <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+              <div
+                class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right top-10 rounded-md bg-gray-900/50 py-1 shadow-lg ring-1 border-none ring-black ring-opacity-5 focus:outline-none backdrop-blur-xl backdrop-brightness-150 backdrop-contrast-100 backdrop-saturate-150"
+                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" id="usuario" tabindex="-1">
+                <!-- Active: "bg-gray-100", Not Active: "" -->
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                  id="user-menu-item-0">Your Profile</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                  id="user-menu-item-1">Settings</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                  id="user-menu-item-2">Sign out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page">Dashboard</a>
+
+          <a href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+
+          <a href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+
+          <a href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--espacio arriba-->
+  <div class="h-20"></div>
+  <div class="flex justify-center flex-col items-center">
+    <h1 class="text-4xl">texto</h1>
+    <img src="https://img.europapress.es/fotoweb/fotonoticia_20220808081246_640.webp" alt="" class="w-auto h-auto" />
+  </div>
+
+<!-- cards-->
+  <div class="grid grid-cols-2 md:grid-cols-4 container">
+    <div class="container w-10/12 my-4 border-2 border-gray-800 rounded-lg  drop-shadow-lg">
+      <div class="bg-sky-500 h-10 flex flex-col place-content-center text-center rounded-t-md">
+        <h3 class="text-xl text-center place-items-center">titulo</h3>
+      </div>
+      <div class="flex justify-center flex-col items-center">
+        <img class="" src="src/imagenes_example/600X600.png" alt="" srcset="" />
+        <!--<p class="text-center my-0">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore hic laudantium facere fugit aut, distinctio doloremque, mollitia magni libero repudiandae quidem corporis? Ad quidem ipsum ducimus inventore, aspernatur pariatur nesciunt.
+        </p>-->
+        <div class="grid grid-cols-3 h-12">
+          <button id="quitar_1" class="hover:bg-red-400 bg-red-200 flex justify-center flex-col items-center rounded-bl-md">
+            
+            <div class="w-8 h-8 p-1 bg-red-700 text-center rounded-full border-2 border-black flex justify-center">
+              <svg class="fill-orange-600 stroke-violet-100" version="1.1" viewBox="0 0 11.311 1.5875"
+                xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(-50.982 -107.88)">
+                  <text x="50.387096" y="117.80645" fill="#000000" font-family="'MS Gothic'" font-size="25.4px"
+                    xml:space="preserve">
+                    <tspan x="50.387096" y="117.80645">-</tspan>
+                  </text>
+                </g>
+              </svg>
+            </div>
+
+          </button>
+            <input id="diag_anime_1"
+            class="text-center rounded-sm border-2 border-gray-700/10 active:bg-blue-200 focus:bg-blue-200  appearance-none"
+            type="number" value="0" min="0" />
+  
+            <button id="poner1" class="hover:bg-green-500 bg-green-300 flex justify-center flex-col items-center rounded-br-md">  
+              <div  class="w-8 h-8 p-1 bg-green-700 text-center rounded-full border-2 border-black flex justify-center">
+             <svg class="fill-orange-600 stroke-violet-100" version="1.1" viewBox="0 0 11.41 11.311"
+                xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(-76.176 -131.76)" fill="#f9f9f9" font-family="'Lucida Console'">
+                  <text transform="scale(.26458)" font-size="96px" style=" white-space: pre" />
+                  <text x="75.580643" y="146.54839" font-size="25.4px">
+                    <tspan x="75.580643" y="146.54839" fill="#000000" font-family="'MS Gothic'">
+                      +
+                    </tspan>
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="bg-gray-700 w-full max-h-50 min-h-50 h-screen2">
+    <div class="flex ">
+        
+    </div>
+  </footer>
+
+  <script src="/node_modules/animejs/lib/anime.min.js"></script>
+  <!--alertas cliente-->
+  <script src="/node_modules/izitoast/dist/js/iziToast.min.js"></script>
+  <!--alertas mod-->
+  <script src="/node_modules/alertifyjs/build/alertify.min.js"></script>
+  <!--alertas borrar-->
+  <script src="/node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
