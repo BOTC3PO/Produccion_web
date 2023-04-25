@@ -5,8 +5,13 @@ define('DB_NAME', 'mydb');
 define('DB_USER','root');
 define('DB_PASSWORD','');
 
-define("pathlist",[
-    
-
+define("PathList",[
+    "index.php",
+    "producto.php",
+    "perfil.php",
+    "login.php",
+    "carrito.php",
+    "contacto.php",
+    "catalogo.php"
 ])
 ?>

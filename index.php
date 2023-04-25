@@ -1,4 +1,5 @@
 <?php
+    require('config.php');
     require('src/modules/topper.php');
     require('src/modules/css.php');
     $title="Index";

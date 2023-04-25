@@ -42,16 +42,16 @@
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="<?php if($title=="Index"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  text-white rounded-md px-3 py-2 text-sm font-medium"
+                <a href=" <?php if ($title=="Index") {echo "#";}else {echo PathList[0];}   ?> " class="<?php if($title=="Index"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  text-white rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page">Home</a>
 
-                <a href="#"
+                <a href="<?php if ($title=="Catalogo") {echo "#";}else {echo PathList[6];}   ?>"
                   class="text-gray-300 <?php if($title=="Catalogo"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  hover:text-white rounded-md px-3 py-2 text-sm font-medium">Catalogo</a>
 
-                <a href="#"
+                <a href="<?php if ($title=="Recomendaciones") {echo "#";}else {echo PathList[0];}   ?>"
                   class="text-gray-300 <?php if($title=="Recomendaciones"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  hover:text-white rounded-md px-3 py-2 text-sm font-medium">Recomendaciones</a>
 
-                <a href="#"
+                <a href="<?php if ($title=="Contacto") {echo "#";}else {echo PathList[5];}   ?>"
                   class="text-gray-300 <?php if($title=="Contacto"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contacto</a>
               </div>
             </div>
@@ -90,10 +90,23 @@
                 class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right top-10 rounded-md bg-gray-900/50 py-1 shadow-lg ring-1 border-none ring-black ring-opacity-5 focus:outline-none backdrop-blur-xl backdrop-brightness-150 backdrop-contrast-100 backdrop-saturate-150"
                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" id="usuario" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                <a href="<?php echo PathList[2];   ?>" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-0">Perfil</a>
+                  <?php
+                  $login=true;
+                  if ($login) { 
+                  ?>
+                <a href="<?php echo PathList[3]; ?>" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                  id="user-menu-item-2">Login</a>
+                  <?php
+                  }else{
+                  ?>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-2">Sign out</a>
+                  <?php
+                  }
+
+                  ?>
               </div>
             </div>
           </div>
@@ -104,16 +117,16 @@
       <div class="hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="#" class="<?php if($title=="Index"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  text-white block rounded-md px-3 py-2 text-base font-medium"
+          <a href=" <?php if ($title=="Index") {echo "#";}else {echo PathList[0];}   ?> " class="<?php if($title=="Index"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page">Home</a>
 
-          <a href="#"
+          <a href="<?php if ($title=="Catalogo") {echo "#";}else {echo PathList[6];}   ?>"
             class="text-gray-300 <?php if($title=="Catalogo"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?> hover:text-white block rounded-md px-3 py-2 text-base font-medium">Catalogo</a>
 
-          <a href="#"
+          <a href="<?php if ($title=="Recomendaciones") {echo "#";}else {echo PathList[0];}   ?>"
             class="text-gray-300  <?php if($title=="Recomendaciones"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  hover:text-white block rounded-md px-3 py-2 text-base font-medium">Recomendaciones</a>
 
-          <a href="#"
+          <a href="<?php if ($title=="Contacto") {echo "#";}else {echo PathList[5];}   ?>"
             class="text-gray-300 <?php if($title=="Contacto"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?> hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contacto</a>
         </div>
       </div>
@@ -121,7 +134,3 @@
   </div>
   <!--espacio arriba-->
   <div class="h-20"></div>
-  <div class="flex justify-center flex-col items-center">
-    <h1 class="text-4xl">texto</h1>
-    <img src="https://img.europapress.es/fotoweb/fotonoticia_20220808081246_640.webp" alt="" class="w-auto h-auto" />
-  </div>
