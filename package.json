@@ -16,11 +16,13 @@
     "build-css": "tailwindcss build config.css -o src/css/style.css --watch"
   },
   "dependencies": {
+    "@nodelib/fs.scandir": "^2.1.5",
     "@sweetalert2/themes": "^5.0.15",
     "alertifyjs": "^1.13.1",
     "animejs": "^3.2.1",
+    "fast-glob": "^3.2.12",
+    "glob": "^10.2.2",
     "izitoast": "^1.4.0",
     "sweetalert2": "^11.4.8"
   }
-
 }

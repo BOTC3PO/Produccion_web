@@ -1,14 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [        './components/**/*.{html,js}',
-  './pages/**/*.{html,js}',
+  content: [        
   './index.php',
-  './index.html',],
+  './src/**/*.{php,js}',
+  './*.{php}',
+  './index.html',
+
+    ],
   theme: {
     extend: {
       fontFamily: {
-        'icons': ['Social']
-    
+        'icons': ['Social'],
       },
       gridTemplateColumns: {
         // Simple 16 column grid
