@@ -6,6 +6,10 @@ module.exports = {
   './index.html',],
   theme: {
     extend: {
+      fontFamily: {
+        'icons': ['Social']
+    
+      },
       gridTemplateColumns: {
         // Simple 16 column grid
         '20': 'repeat(20, minmax(0, 1fr))',

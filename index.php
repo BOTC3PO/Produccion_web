@@ -68,18 +68,16 @@ for ($i=0; $i < 16; $i++) {
      <?php } ?>
   </div>
   
-  <h1>
-<?php
-    require('src/modules/metadatos.php');
-?>
- </h1>
+ 
 
   <?php
     require('src/modules/footer.php');
     require('src/modules/js.php');
     require('src/modules/script.php');
 
-?>
+  ?>
+
+
 
 
 </body>
