@@ -750,6 +750,10 @@ select {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -769,6 +773,10 @@ select {
 
 .top-10 {
   top: 2.5rem;
+}
+
+.top-20 {
+  top: 5rem;
 }
 
 .-z-10 {
@@ -822,6 +830,10 @@ select {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -854,6 +866,10 @@ select {
   height: 5rem;
 }
 
+.h-5\/6 {
+  height: 83.333333%;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -874,10 +890,6 @@ select {
   height: 50vh;
 }
 
-.h-5\/6 {
-  height: 83.333333%;
-}
-
 .max-h-50 {
   max-height: 500px;
 }
@@ -890,6 +902,10 @@ select {
   width: 83.333333%;
 }
 
+.w-4\/12 {
+  width: 33.333333%;
+}
+
 .w-48 {
   width: 12rem;
 }
@@ -898,8 +914,16 @@ select {
   width: 1.5rem;
 }
 
+.w-60 {
+  width: 15rem;
+}
+
 .w-8 {
   width: 2rem;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
 }
 
 .w-auto {
@@ -1236,6 +1260,10 @@ select {
 
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 

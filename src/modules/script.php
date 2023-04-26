@@ -1,7 +1,7 @@
 <script>
 
 <?php 
-for ($i=0; $i < 16; $i++) { 
+for ($i=0; $i < $cards; $i++) { 
     # code...
 
 ?>
