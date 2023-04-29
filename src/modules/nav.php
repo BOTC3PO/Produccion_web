@@ -48,7 +48,7 @@
                 <a href="<?php if ($title=="Catalogo") {echo "#";}else {echo PathList[6];}   ?>"
                   class="text-gray-300 <?php if($title=="Catalogo"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  hover:text-white rounded-md px-3 py-2 text-sm font-medium">Catalogo</a>
 
-                <a href="<?php if ($title=="Recomendaciones") {echo "#";}else {echo PathList[0];}   ?>"
+                <a href="<?php if ($title=="Recomendaciones") {echo "#";}else {echo PathList[7];}   ?>"
                   class="text-gray-300 <?php if($title=="Recomendaciones"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  hover:text-white rounded-md px-3 py-2 text-sm font-medium">Recomendaciones</a>
 
                 <a href="<?php if ($title=="Contacto") {echo "#";}else {echo PathList[5];}   ?>"
@@ -58,7 +58,7 @@
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <!---bg-gray-800--->
-            <button type="button"
+            <button type="button" id="carrito"
               class="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
               <span class="sr-only">View notifications</span>
               <img src="src/interface/cart.png" alt="" srcset="" width="25" />
@@ -123,7 +123,7 @@
           <a href="<?php if ($title=="Catalogo") {echo "#";}else {echo PathList[6];}   ?>"
             class="text-gray-300 <?php if($title=="Catalogo"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?> hover:text-white block rounded-md px-3 py-2 text-base font-medium">Catalogo</a>
 
-          <a href="<?php if ($title=="Recomendaciones") {echo "#";}else {echo PathList[0];}   ?>"
+          <a href="<?php if ($title=="Recomendaciones") {echo "#";}else {echo PathList[7];}   ?>"
             class="text-gray-300  <?php if($title=="Recomendaciones"){ echo "bg-gray-900" ;}else{echo "hover:bg-gray-700";} ?>  hover:text-white block rounded-md px-3 py-2 text-base font-medium">Recomendaciones</a>
 
           <a href="<?php if ($title=="Contacto") {echo "#";}else {echo PathList[5];}   ?>"

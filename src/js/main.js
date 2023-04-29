@@ -150,6 +150,11 @@ input_1_poner.addEventListener("click", input_1_poner_1);
 //anime
 
 
+const menu_usuariobutton = document.getElementById("carrito");
 
+const menu_usuariofuncion = () => {
+    document.location.href="http://localhost/programacion_web_2/carrito.php";
+    console.log(true);
+}
 
-
+menu_usuariobutton.addEventListener("click",menu_usuariofuncion);
