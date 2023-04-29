@@ -1,5 +1,5 @@
 <!-- cards-->
-<div class="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-2  container">
+<div class="grid grid-cols-<?php echo $columnassm ?> md:grid-cols-4 sm:grid-cols-<?php echo $columnassm ?>  container">
 <?php 
 for ($i=0; $i < $cards; $i++) { 
   # code...

@@ -3,6 +3,7 @@
     require('src/modules/topper.php');
     require('src/modules/css.php');
     $cards=16;
+    $columnassm=1;
     $title="Index";
 ?>
   <title> <?php echo $title ?></title>
