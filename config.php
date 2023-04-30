@@ -12,6 +12,7 @@ define("PathList",[
     "login.php",
     "carrito.php",
     "contacto.php",
-    "catalogo.php"
+    "catalogo.php",
+    "recomendaciones.php"
 ])
 ?>
