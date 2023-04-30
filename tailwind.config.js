@@ -3,6 +3,7 @@ module.exports = {
   content: [        
   './index.php',
   './src/**/*.{php,js}',
+  '.src/modules/card_list.php',
   './*.php',
   './index.html',
 
