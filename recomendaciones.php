@@ -14,7 +14,7 @@
 
 <?php
 
-require('src/modules/card_list.php')
+    require('src/modules/card_list.php')
 
 ?>
 

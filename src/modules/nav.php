@@ -133,4 +133,10 @@
     </nav>
   </div>
   <!--espacio arriba-->
+  <?php  if ($title!="Contacto") {
+    # code...
+  ?>
   <div class="h-20"></div>
+<?php
+} 
+?>

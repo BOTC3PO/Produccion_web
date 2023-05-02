@@ -9,9 +9,9 @@ for ($i=0; $i < $combo[$s] ; $i++) {
     <div class="bg-yellow-300 flex justify-center">
         <img class="w-24" src="src/imagenes_example/600x600.png" alt="">
     </div>
-    <div class="bg-green-700 col-span-5">2</div>
-    <div class="bg-red-600 col-span-2">3</div>
-    <div class="bg-purple-500 col-span-2">4</div>
+    <div class="bg-green-700 col-span-7">titulo</div>
+    <div class="bg-red-600 col-span-1">cantidad</div>
+    <div class="bg-purple-500 col-span-1">precio</div>
 </div>
 
 <?php 

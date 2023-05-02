@@ -4,6 +4,8 @@ module.exports = {
   './index.php',
   './src/**/*.{php,js}',
   '.src/modules/card_list.php',
+  '.recomendaciones.php',
+  '.contacto.php',
   './*.php',
   './index.html',
 
@@ -45,13 +47,16 @@ module.exports = {
     },
     height:{
       'screen2':'50vh',
-
+      'screenfullh':'80vh'
     },
     maxHeight:{
       '50':'500px'
     },
     minHeight:{
       '50':'300px'
+    },
+    backgroundImage:{
+      'texture1':'url("http://localhost/programacion_web_2/src/imagenes_example/texture1.png")',
     }
 
     },
