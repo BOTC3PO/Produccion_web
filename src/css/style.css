@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -602,6 +602,9 @@ select {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -649,6 +652,9 @@ select {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -852,8 +858,13 @@ select {
   grid-column: span 1 / span 1;
 }
 
+<<<<<<< HEAD
 .col-span-7 {
   grid-column: span 7 / span 7;
+=======
+.col-span-5 {
+  grid-column: span 5 / span 5;
+>>>>>>> c7636d49d7c1081a5e5a96b4ce554f04bf8ce76e
 }
 
 .m-0 {
@@ -1040,6 +1051,7 @@ select {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .w-28 {
   width: 7rem;
 }
@@ -1056,6 +1068,8 @@ select {
   width: 41.666667%;
 }
 
+=======
+>>>>>>> c7636d49d7c1081a5e5a96b4ce554f04bf8ce76e
 .max-w-7xl {
   max-width: 80rem;
 }
