@@ -31,5 +31,5 @@ $columnassm=1;
     <?php
     require('src/modules/footer.php');
     require('src/modules/js.php');
-    require('src/modules/script.php');
+    #require('src/modules/script.php');
     ?>
