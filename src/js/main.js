@@ -115,7 +115,7 @@ const input_12 = document.getElementById("diag_anime_12");
 const input_13 = document.getElementById("diag_anime_13");
 const input_14 = document.getElementById("diag_anime_14");
 const input_15 = document.getElementById("diag_anime_15");
-const input_16 = document.getElementById("diag_anime_16");
+const input_0 = document.getElementById("diag_anime_0");
 
 const input_1_quitar = document.getElementById("quitar_1");
 const input_2_quitar = document.getElementById("quitar_2");
@@ -132,7 +132,7 @@ const input_12_quitar = document.getElementById("quitar_12");
 const input_13_quitar = document.getElementById("quitar_13");
 const input_14_quitar = document.getElementById("quitar_14");
 const input_15_quitar = document.getElementById("quitar_15");
-const input_16_quitar = document.getElementById("quitar_16");
+const input_0_quitar = document.getElementById("quitar_0");
 
 const input_1_poner = document.getElementById("poner1");
 const input_2_poner = document.getElementById("poner2");
@@ -149,25 +149,50 @@ const input_12_poner = document.getElementById("poner12");
 const input_13_poner = document.getElementById("poner13");
 const input_14_poner = document.getElementById("poner14");
 const input_15_poner = document.getElementById("poner15");
-const input_16_poner = document.getElementById("poner16");
+const input_0_poner = document.getElementById("poner0");
 
-const inputs = [input_1,input_2,input_3,input_4,input_5,input_6,input_7,input_8,input_9,input_10,input_11,input_12,input_13,input_14,input_15,input_16]
+var inputs = [input_0,input_1,input_2,input_3,input_4,input_5,input_6,input_7,input_8,input_9,input_10,input_11,input_12,input_13,input_14,input_15]
 
-const inputsp = [input_1_poner, input_2_poner, input_3_poner, input_4_poner, input_5_poner, input_6_poner, input_7_poner, input_8_poner, input_9_poner,input_10_poner, input_11_poner, input_12_poner, input_13_poner, input_14_poner, input_15_poner, input_16_poner];
+var inputsp = [input_0_poner,input_1_poner, input_2_poner, input_3_poner, input_4_poner, input_5_poner, input_6_poner, input_7_poner, input_8_poner, input_9_poner,input_10_poner, input_11_poner, input_12_poner, input_13_poner, input_14_poner, input_15_poner];
 
-const inputsq = [input_1_quitar, input_2_quitar, input_3_quitar, input_4_quitar, input_5_quitar, input_6_quitar, input_7_quitar, input_8_quitar, input_9_quitar, input_10_quitar, input_11_quitar, input_12_quitar, input_13_quitar, input_14_quitar, input_15_quitar, input_16_quitar]
+var inputsq = [input_0_quitar,  input_1_quitar, input_2_quitar, input_3_quitar, input_4_quitar, input_5_quitar, input_6_quitar, input_7_quitar, input_8_quitar, input_9_quitar, input_10_quitar, input_11_quitar, input_12_quitar, input_13_quitar, input_14_quitar, input_15_quitar]
 
-const quitar = (vin) => {
+function quitar(vin){
+    console.log(vin);
     if (inputs[vin].value > 0) {
         inputs[vin].value = inputs[vin].value - 1;
     }
 }
 
-const poner = (vin) => {
+
+function poner(vin){
     if (inputs[vin].value < 9999) {
         inputs[vin].value = parseInt(inputs[vin].value) + 1;
     }
 }
+
+
+function equilibrar(vin)  {
+   
+    if (inputs[vin].value < 9999) {
+        inputs[vin].value=9999;
+    }
+
+    if (inputs[vin].value > 0) {
+        inputs[vin].value=0;
+    }
+}
+
+
+
+/*
+for (let index = 0; index < inputs.length; index++) {
+    inputs[index].addEventListener('onchange',equilibrar(index));
+    inputsp[index].addEventListener("click", quitar(index));
+    inputsq[index].addEventListener("click", poner(index));
+    
+}
+*/
 
 
 /*

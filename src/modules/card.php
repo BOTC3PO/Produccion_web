@@ -16,7 +16,7 @@ for ($i=0; $i < $cards; $i++) {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore hic laudantium facere fugit aut, distinctio doloremque, mollitia magni libero repudiandae quidem corporis? Ad quidem ipsum ducimus inventore, aspernatur pariatur nesciunt.
         </p>-->
         <div class="grid grid-cols-3 h-12">
-          <button id="quitar_<?php echo $i ?>" class="hover:bg-red-400 bg-red-200 flex justify-center flex-col items-center rounded-bl-md">
+          <button id="quitar_<?php echo $i ?>" onclick="quitar(<?php echo $i ?>);" class="hover:bg-red-400 bg-red-200 flex justify-center flex-col items-center rounded-bl-md">
             
             <div class="w-8 h-8 p-1 bg-red-700 text-center rounded-full border-2 border-black flex justify-center">
               <svg class="fill-orange-600 stroke-violet-100" version="1.1" viewBox="0 0 11.311 1.5875"
@@ -31,11 +31,11 @@ for ($i=0; $i < $cards; $i++) {
             </div>
 
           </button>
-            <input id="diag_anime_<?php echo $i ?>" name="publicacion<?php echo $i ?>"
+            <input id="diag_anime_<?php echo $i ?>" onchange="equilibrar(<?php echo $i ?>);" name="publicacion<?php echo $i ?>"
             class="text-center rounded-sm border-2 border-gray-700/10 active:bg-blue-200 focus:bg-blue-200  appearance-none"
             type="number" value="0" min="0" />
   
-            <button id="poner<?php echo $i ?>" class="hover:bg-green-500 bg-green-300 flex justify-center flex-col items-center rounded-br-md">  
+            <button id="poner<?php echo $i ?>" onclick="poner(<?php echo $i ?>);" class="hover:bg-green-500 bg-green-300 flex justify-center flex-col items-center rounded-br-md">  
               <div  class="w-8 h-8 p-1 bg-green-700 text-center rounded-full border-2 border-black flex justify-center">
              <svg class="fill-orange-600 stroke-violet-100" version="1.1" viewBox="0 0 11.41 11.311"
                 xmlns="http://www.w3.org/2000/svg">
