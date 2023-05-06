@@ -1,29 +1,55 @@
 <?php
-    require('config.php');
-    require('src/modules/topper.php');
-    require('src/modules/css.php');
-    $title="recomendaciones";
+require('config.php');
+require('src/modules/topper.php');
+require('src/modules/css.php');
+$title = "perfil";
+$background[] = ["from-cyan-500 to-blue-500", "d"];
 ?>
-  <title> <?php echo $title ?></title>
+<title>
+  <?php echo $title ?>
+</title>
+
 <body>
-<?php
-    require('src/modules/nav.php');
-?> 
+  <?php
+  require('src/modules/nav.php');
+  ?>
 
 
-<div>
-  <img src="src/imagenes_example/325672.jpg" class="w-48 h-48 rounded-full ring-1 ring-slate-950 object-cover object-center	" alt="">
-    <div>
-      
+  <div class="min-h-screen">
+    <div class="shadow-lg">
+      <div
+        class="absolute w-full rounded-xl border-10 border-white h-64 bg-gradient-to-r from-cyan-500 to-blue-500 -z-10 top-16 flex items-center justify-center">
+        <h2 class="text-3xl text-black/70  backkdrop-blur-sm backkdrop-hue-rotate-180	m-2">Felix Lennon</h2>
+      </div>
+      <div class=" flex w-full h-80 items-end">
+        <img src="src/imagenes_example/325672.jpg"
+          class=" ml-5 w-48 h-48 rounded-full ring-4 ring-slate-100 object-cover object-center	" alt="">
+      </div>
+      <div class="m-4">
+        <div class="flex">
+        <img src="src/bandera/ar.svg" class="w-10 shadow-lg rounded border-2 border-black"  alt="">
+        <p class="ml-2">Argentina</p>
+        </div>
+        <div class="my-2">
+          <p>Direccion   Av. 9 de Julio s/n, C1043 CABA</p>
+        </div>
+        <div> 
+        <button class="bg-blue-600 text-blue-50 rounded w-24 h-10 mb-10"> Compras </button>  
+        </div>
+      </div>
     </div>
-</div>
+    <div class="h-full">
+    
+    </div>
+  </div>
 
+  
 
-<?php
-    require('src/modules/footer.php');
-    require('src/modules/js.php');
+  <?php
+  require('src/modules/footer.php');
+  require('src/modules/js.php');
   #  require('src/modules/script.php');
-
+  
   ?>
 
 </body>
