@@ -90,7 +90,10 @@
                 class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right top-10 rounded-md bg-gray-900/50 py-1 shadow-lg ring-1 border-none ring-black ring-opacity-5 focus:outline-none backdrop-blur-xl backdrop-brightness-150 backdrop-contrast-100 backdrop-saturate-150"
                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" id="usuario" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                <a href="<?php echo PathList[2];   ?>" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                <?php
+                $admin=true;  
+                 ?>
+                <a href="<?php if ($admin) { echo PathList[2].'?admin=1' ; }else{ echo PathList[2];}   ?>" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-0">Perfil</a>
                   <?php
                   $login=true;

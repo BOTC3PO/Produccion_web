@@ -37,10 +37,20 @@ $direccion=['bg-gradient-to-r',"bg-gradient-to-l","bg-gradient-to-t","bg-gradien
         <div> 
         <button class="bg-blue-600 text-blue-50 rounded w-24 h-10 mb-10 "> Compras </button>  
         </div>
+        <?php
+        $admin = $_GET['admin'] ?? null ;
+        if ($admin=="1") {
+        ?>
+        <div>
+          <button class="bg-red-600 text-blue-50 rounded w-24 h-10 mb-10 ">administrar</button>
+        </div>
+
+        <?php   } ?>
       </div>
     </div>
-    <div class="h-full ">
-      
+    
+    <div class="hidden">
+            <!--  aqui irian las compras y opciones --->
     </div>
   </div>
 
