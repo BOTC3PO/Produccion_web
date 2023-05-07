@@ -256,3 +256,43 @@ const menu_usuariofuncion = () => {
 
 menu_usuariobutton?.addEventListener("click", menu_usuariofuncion);
 
+
+const admin1 = document.getElementsByClassName("admin_1");
+const admin2 = document.getElementsByClassName("admin_2");
+const admin3 = document.getElementsByClassName("admin_3");
+const admin4 = document.getElementsByClassName("admin_4");
+const admin5 = document.getElementsByClassName("admin_5");
+
+
+
+
+
+const admin_send1 = () => {
+    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=1";
+    console.log(true);
+}
+
+const admin_send2 = () => {
+    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=2";
+    console.log(true);
+}
+const admin_send3 = () => {
+    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=3";
+    console.log(true);
+}
+const admin_send4 = () => {
+    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=4";
+    console.log(true);
+}
+const admin_send5 = () => {
+    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=5";
+    console.log(true);
+}
+
+for (let index = 0; index < admin1.length; index++) {
+admin1[index]?.addEventListener("click", admin_send1);
+admin2[index]?.addEventListener("click", admin_send2);
+admin3[index]?.addEventListener("click", admin_send3);
+admin4[index]?.addEventListener("click", admin_send4);
+admin5[index]?.addEventListener("click", admin_send5);
+}

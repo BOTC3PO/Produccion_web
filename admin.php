@@ -2,6 +2,7 @@
     require('config.php');
     require('src/modules/topper.php');
     require('src/modules/css.php');
+    require('src/modules/datos.php');
     $adminp=0;
     $title="Panel de administracion";
 ?>

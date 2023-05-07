@@ -2,8 +2,10 @@
     require('config.php');
     require('src/modules/topper.php');
     require('src/modules/css.php');
-    $combo =[6];
+    require('src/modules/datos.php');
     $titulo_combo=["Resumen"];
+    $combo =[3];
+    $productosid=[9,11,13];
     $title="carrito";
 ?>
   <title> <?php echo $title ?></title>

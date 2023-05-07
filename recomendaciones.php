@@ -2,8 +2,10 @@
     require('config.php');
     require('src/modules/topper.php');
     require('src/modules/css.php');
-    $combo =[6,7,9,5];
-    $titulo_combo=["Pc_basica","no se","gamer pack","slim"];
+    require('src/modules/datos.php');
+    $combo =[3];
+    $productosid=[9,11,13];
+    $titulo_combo=["kit_actualizacion"];
     $title="Recomendaciones";
 ?>
   <title> <?php echo $title ?></title>

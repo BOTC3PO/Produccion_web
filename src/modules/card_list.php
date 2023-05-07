@@ -16,15 +16,15 @@ for ($i=0; $i < $combo[$s] ; $i++) {
     <?php 
         if (!in_array("subtotal",$titulo_combo)) {
     ?>
-    <div class="bg-yellow-300 col-span-2 md:col-span-1 flex justify-center">
-        <img class="w-24" src="src/imagenes_example/600x600.png" alt="">
+    <div class="bg-slate-200 col-span-2 md:col-span-1 flex justify-center">
+        <img class="w-24" src="<?php echo $dir_producto.''.$producto[$productosid[$i]].'.jpg' ?>" alt="">
     </div>
     <?php } ?>
-    <div class="bg-green-700 h-24  <?php  if (!in_array("subtotal",$titulo_combo)){echo "col-span-4  md:col-span-7";}else{echo "col-span-8";} ?>">
+    <div class="bg-slate-200  h-24 flex justify-center items-center <?php  if (!in_array("subtotal",$titulo_combo)){echo "col-span-4  md:col-span-7";}else{echo "col-span-8";} ?>">
         <?php 
         if (!in_array("subtotal",$titulo_combo)) {
         ?>
-        titulo
+        <p><?php echo $titulo[$productosid[$i]]?></p>
         <?php
         }else{
         echo $titulo_combo[$s];
@@ -32,9 +32,9 @@ for ($i=0; $i < $combo[$s] ; $i++) {
         ?>
     </div>
     <?php if(!in_array("subtotal",$titulo_combo)){?>
-    <div class="bg-red-600 col-span-2 md:col-span-1 ">cantidad</div>
+    <div class="bg-slate-200  col-span-2 md:col-span-1 flex justify-center items-center ">1</div>
     <?php } ?>
-    <div class="bg-purple-500 <?php if(!in_array("subtotal",$titulo_combo)){ echo "col-span-2 md:col-span-1" ;}else{echo "col-span-2";} ?> ">precio</div>
+    <div class="bg-slate-200 flex justify-center items-center <?php if(!in_array("subtotal",$titulo_combo)){ echo "col-span-2 md:col-span-1" ;}else{echo "col-span-2";} ?> "><p><?php if(!in_array("subtotal",$titulo_combo)){ echo $precio[$productosid[$i]];}else{echo ( $d= $precio[$productosid[0]]+$precio[$productosid[1]]+$precio[$productosid[2]]);} ?></p></div>
 </div>
 
 <?php 

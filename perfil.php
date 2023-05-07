@@ -42,7 +42,7 @@ $direccion=['bg-gradient-to-r',"bg-gradient-to-l","bg-gradient-to-t","bg-gradien
         if ($admin=="1") {
         ?>
         <div>
-          <button class="bg-red-600 text-blue-50 rounded w-24 h-10 mb-10 ">administrar</button>
+          <button class="bg-red-600 text-blue-50 rounded w-24 h-10 mb-10 "><a href="admin.php" class="w-full h-full">administrar</a></button>
         </div>
 
         <?php   } ?>

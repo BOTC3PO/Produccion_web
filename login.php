@@ -2,7 +2,7 @@
 require('config.php');
 require('src/modules/topper.php');
 require('src/modules/css.php');
-$title = "recomendaciones";
+$title = "login";
 ?>
 <title>
   <?php echo $title ?>
@@ -15,8 +15,8 @@ $title = "recomendaciones";
 
 
   <div class="h-screen w-screen flex justify-center items-center flex-col">
-    <div class="flex justify-center items-center flex-col h-screen w-screen bg-lime-300">
-      <div class="shadow-2xl bg-lime-500/50 md:w-3/12 w-8/12 h-3/6 flex justify-center items-center flex-col">
+    <div class="flex justify-center items-center flex-col h-screen w-screen bg-gradient-to-r from-violet-500 to-cyan-500  ">
+      <div class="shadow-2xl bg-stone-300/80 md:w-3/12 w-8/12 h-3/6 flex justify-center items-center flex-col">
         <form action="#" class="h-4/6 w-full flex justify-center items-center flex-col">
           <div class="flex flex-col w-10/12">
             <label for="user">usuario</label>
