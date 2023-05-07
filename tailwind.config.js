@@ -45,13 +45,15 @@ module.exports = {
     width:{
       'screen2':'50vw',
       '95p':'95%',
-      '5p':'5%'
+      '5p':'5%',
+      '94p':'94%'
     },
     height:{
       'screen2':'50vh',
       'screenfullh':'80vh',
       '95p':'95%',
-      '5p':'5%'
+      '5p':'5%',
+      '94p':'94%'
     },
     maxHeight:{
       '50':'500px'
