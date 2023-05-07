@@ -141,43 +141,43 @@
                 <?php
                 break;
             case '2':
-                $id = -1;
                 ?>
 
                 <div class="w-full">
                     <div class="h-12 flex justify-center items-center  bg-slate-800 absolute w-full">
                         <h2 class="text-3xl text-slate-300">Borrar Producto</h2>
-
                     </div>
-                    <?php  ?>
-                        <div class="mt-12 h-12 grid grid-cols-12 text-center bg-slate-300 absolute  items-center w-full md:w-94p">
-                            <div class=" border-l-2">
-                                id
-                            </div>
-                            <div class="col-span-2 border-l-2">
-                                categoria
-                            </div>
-                            <div class="col-span-3 border-l-2">
-                                nombre
-                            </div>
-                            <div class="col-span-2 border-l-2">
-                                precio
-                            </div>
-                            <div class="col-span-4 border-l-2">
-                                acciones
-                            </div>
+                    <?php ?>
+                    <div class="mt-12 h-12 grid grid-cols-12 text-center bg-slate-300 absolute  items-center w-full md:w-94p">
+                        <div class=" border-l-2">
+                            id
                         </div>
-                        <?php  for ($i=0; $i < 40; $i++) {
-                        if (random_int(0,1)==1) {
-                        $r="bg-gray-100";
-                        }else{
-                        $r="bg-red-500";
+                        <div class="col-span-2 border-l-2">
+                            categoria
+                        </div>
+                        <div class="col-span-3 border-l-2">
+                            nombre
+                        </div>
+                        <div class="col-span-2 border-l-2">
+                            precio
+                        </div>
+                        <div class="col-span-4 border-l-2">
+                            acciones
+                        </div>
+                    </div>
+                    <?php for ($i = 0; $i < 40; $i++) {
+                        if (random_int(0, 1) == 1) {
+                            $r = "bg-gray-100";
+                        } else {
+                            $r = "bg-red-500";
                         }
                         ?>
 
-                        <div class="<?php if ($i==0) {echo "mt-28" ;}  ?> grid h-12 grid-cols-12 text-center <?php echo $r ;?> items-center">
+                        <div class="<?php if ($i == 0) {
+                            echo "mt-28";
+                        } ?> grid h-12 grid-cols-12 text-center <?php echo $r; ?> items-center">
                             <div>
-                                <?php echo $i ;?>
+                                <?php echo $i; ?>
                             </div>
                             <div class="col-span-2">
                                 categoria
@@ -200,7 +200,7 @@
                         </div>
 
 
-                    <?php  }
+                    <?php }
                     ; ?>
                     <div class="mb-16">
                         <p class="text-center">-- fin --</p>
@@ -215,21 +215,151 @@
             <?php
             break;
             case '3':
+                $id = 0;
                 ?>
-                    <div class="h-12 flex justify-center items-center  bg-slate-800 absolute w-full">
-                        <h2 class="text-3xl text-slate-300">Editar Producto</h2>
+            <div class="h-12 flex justify-center items-center bg-slate-800 absolute w-full">
+                <h2 class="text-3xl text-slate-300">Editar Producto</h2>
+            </div>
+            <?php
+            if ($id >= 0) {
+                ?>
+                <div class="flex justify-center items-center w-full h-full">
+                    <div class=" md:w-4/12 md:h-3/6 min-h-fit min-w-min w-11/12 bg-neutral-100/75 border-10 border-neutral-100/75 rounded-2xl shadow-lg">
+                        <form class="min-h-fit min-w-min flex justify-center items-center w-full h-full flex-col" action="#">
+                            <div class="grid">
+                                <label for="id">id</label>
+                                <input class="appearance-none bg-white" type="number">
+                            </div>
+                            <div class="grid">
+                                <label for="categoria">categoria</label>
+                                <input class="appearance-none bg-white" type="text">
+                            </div>
+                            <div class="grid">
+                                <label for="id">precio</label>
+                                <input class="appearance-none bg-white" type="text">  
+                            </div>
+                            <div class="grid">
+                                <label for="id">moneda</label>
+                                <input class="appearance-none bg-white" type="text">
+                            </div>
+                            <div class="grid">
+                                <label for="id">imagenes_example</label>
+                                <input class="appearance-none bg-white" type="text">
+                            </div>
+                        </form>
                     </div>
+                </div>
                 <?php
-                
+            } else {
+
+
                 ?>
+                <div class="w-full">
+                    <div class="mt-12 h-12 grid grid-cols-12 text-center bg-slate-300 absolute  items-center w-full md:w-94p">
+                        <div class=" border-l-2">
+                            id
+                        </div>
+                        <div class="col-span-2 border-l-2">
+                            categoria
+                        </div>
+                        <div class="col-span-3 border-l-2">
+                            nombre
+                        </div>
+                        <div class="col-span-2 border-l-2">
+                            precio
+                        </div>
+                        <div class="col-span-4 border-l-2">
+                            acciones
+                        </div>
+                    </div>
+                    <?php for ($i = 0; $i < 40; $i++) { ?>
+                        <div class="<?php if ($i == 0) {
+                            echo "mt-28";
+                        } ?> grid h-12 grid-cols-12 text-center <?php echo $r; ?> items-center">
+                            <div>
+                                <?php echo $i; ?>
+                            </div>
+                            <div class="col-span-2">
+                                categoria
+                            </div>
+                            <div class="col-span-3">
+                                nombre
+                            </div>
+                            <div class="col-span-2">
+                                precio
+                            </div>
+                            <div class="col-span-4">
+                                <button class="w-20 h-8 rounded-lg bg-yellow-200 border-2 border-black">
+                                    Editar
+                                </button>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <div class="mb-16 md:mb-4">
+                        <p class="text-center">-- fin --</p>
+                    </div>
+                </div>
+
+
+                <?php
+
+            }
+            ?>
+
+
 
             <?php
             break;
 
+            case '4':
+
+            ?>
+                        <div class="h-12 flex justify-center items-center bg-slate-800 absolute w-full">
+                <h2 class="text-3xl text-slate-300">Añadir Producto</h2>
+            </div>
+            <div class="flex justify-center items-center w-full h-full">
+                    <div class=" md:w-4/12 md:h-3/6 min-h-fit min-w-min w-11/12 bg-neutral-100/75 border-10 border-neutral-100/75 rounded-2xl shadow-lg">
+                        <form class="min-h-fit min-w-min flex justify-center items-center w-full h-full flex-col" action="#">
+                            <div class="grid">
+                                <label for="id">id</label>
+                                <input class="appearance-none bg-white" type="number">
+                            </div>
+                            <div class="grid">
+                                <label for="categoria">categoria</label>
+                                <input class="appearance-none bg-white" type="text">
+                            </div>
+                            <div class="grid">
+                                <label for="id">precio</label>
+                                <input class="appearance-none bg-white" type="text">  
+                            </div>
+                            <div class="grid">
+                                <label for="id">moneda</label>
+                                <input class="appearance-none bg-white" type="text">
+                            </div>
+                            <div class="grid">
+                                <label for="id">imagenes_example</label>
+                                <input class="appearance-none bg-white" type="text">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            
+            <?php
+
+                break;
+
+            case '5':
+                ?>
+                <script> location.replace("index.php"); </script>
+                <?php
+            break;
             default:
                 ?>
             <div class="w-screen h-full flex justify-center items-center bg-gray-300">
-                <p class="text-6xl text-center"><span><-- </span><br> <span> seleccione una opcion en la sidebar</span></p>
+                <p class="text-6xl text-center"><span>
+                        <-- </span><br> <span> seleccione una opcion en la sidebar</span></p>
             </div>
 
             <?php
