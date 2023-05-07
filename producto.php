@@ -2,8 +2,18 @@
 require('config.php');
 require('src/modules/topper.php');
 require('src/modules/css.php');
+require('src/modules/datos.php');
 $title = "Producto";
-$producto_titulo = "titulo";
+$id =(int) $_GET['id'] ?? null;
+if ($id<0) {
+  $id=$id*-1;
+}
+if ($id>15) {
+  ?>
+  <script> location.replace("index.php"); </script>
+  <?php
+}
+$producto_titulo = $titulo[$id];
 ?>
 <title>
   <?php echo $title ?>
@@ -22,7 +32,7 @@ $producto_titulo = "titulo";
         <h2 class="text-xl block md:hidden mb-4">
           <?php echo $producto_titulo ?>
         </h2>
-        <img src="src/imagenes_example/600X600.png" alt="" srcset="">
+        <img src="<?php echo $dir_producto .''.$producto[$id] .'.jpg' ?>" alt="" srcset="">
         <div>
 
         </div>
@@ -32,16 +42,16 @@ $producto_titulo = "titulo";
           <h2 class="text-xl invisible md:visible">
             <?php echo $producto_titulo ?>
           </h2>
-          <p class="min-w-full">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta dolor error magnam eum
-            nulla expedita quisquam, vero officiis et in deserunt ut, architecto iste officia facilis. Provident dolore
-            deserunt magni?</p>
+          <p class="min-w-full">
+            <br>
+          </p>
           <div class="flex justify-center items-center">
             <select name="combo" class="appearance-none border-0 focus:ring-0	shadow-lg focus:shadow-none m-0">
               <option class="ring-2  appearance-none">Ars</option>
               <option class="ring-2  appearance-none">Usd</option>
               <option class="ring-2  appearance-none ">Usdc</option>
             </select>
-            <input type="text" disabled class="border-0  m-3 pl-4 w-fit" value="0">
+            <input type="text" disabled class="border-0  m-3 pl-4 w-fit" value="<?php echo $precio[$id] ?>">
           </div>
 
         </div>

@@ -8,6 +8,6 @@
   <!--alertas borrar
   <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>-->
   <script src="src/js/main.js"></script>
-  <!--<script   src="module.js"></script>--->
+  <script src="module.js"></script>
  <!-- <script src="node_modules/parallax-js/src/parallax.js"></script>-->
  

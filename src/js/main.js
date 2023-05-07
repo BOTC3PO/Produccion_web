@@ -174,12 +174,14 @@ function poner(vin){
 
 function equilibrar(vin)  {
    
-    if (inputs[vin].value < 9999) {
+    if (inputs[vin].value > 9999) {
         inputs[vin].value=9999;
+        //console.log('this');
     }
 
-    if (inputs[vin].value > 0) {
+    if (inputs[vin].value < 0) {
         inputs[vin].value=0;
+      //  console.log('not this');
     }
 }
 
@@ -253,3 +255,4 @@ const menu_usuariofuncion = () => {
 }
 
 menu_usuariobutton?.addEventListener("click", menu_usuariofuncion);
+

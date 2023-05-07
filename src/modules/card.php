@@ -7,15 +7,20 @@ for ($i=0; $i < $cards; $i++) {
 ?>
 
     <div class="container w-10/12 my-4 border-2 border-gray-800 rounded-lg  drop-shadow-lg">
-      <div class="bg-sky-500 h-10 flex flex-col place-content-center text-center rounded-t-md">
-        <h3 class="text-xl text-center place-items-center">titulo</h3>
+      <div class="bg-sky-500 h-14 flex flex-col place-content-center text-center rounded-t-md">
+        <h3 class="text-lg text-center place-items-center"> <?php echo $titulo[$i] ?> </h3>
       </div>
       <div class="flex justify-center flex-col items-center">
-        <img class="" src="src/imagenes_example/600X600.png" alt="" srcset="" />
-        <img class="w-4/12 absolute self-start top-11 left-1" src="src/imagenes_example/600X600.png" alt="" srcset="" />
+        <a href="producto.php?id=<?php echo $i?>">
+        <img class="" src="<?php echo $dir_producto.''.$producto[$i].'.jpg' ?>" alt="" srcset="" />
+        <img class="w-4/12 absolute self-start top-16 left-2 bg-white/50" src="<?php echo $dir_marca .''. $marcas[$i].'.svg' ?>" alt="" srcset="" />
+        </a>
         <!--<p class="text-center my-0">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore hic laudantium facere fugit aut, distinctio doloremque, mollitia magni libero repudiandae quidem corporis? Ad quidem ipsum ducimus inventore, aspernatur pariatur nesciunt.
         </p>-->
+        <div>
+          <p></p>
+        </div>
         <div class="grid grid-cols-3 h-12">
           <button id="quitar_<?php echo $i ?>" onclick="quitar(<?php echo $i ?>);" class="hover:bg-red-400 bg-red-200 flex justify-center flex-col items-center rounded-bl-md">
             

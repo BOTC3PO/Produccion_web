@@ -2,7 +2,8 @@ let dolarc;
 axios.get('https://criptoya.com/api/lemoncash/USDC/ARS/1')
 .then(function (response) {
   // handle success
-  console.log(response.data.totalAsk);
+ // console.log(response.data.totalAsk);
+ localStorage.dolarc=response.data.totalAsk;
   return dolarc= response.data;
 })
 .catch(function (error) {
@@ -11,13 +12,15 @@ axios.get('https://criptoya.com/api/lemoncash/USDC/ARS/1')
 })
 .finally(function () {
   // always executed
+
 });
 
 let dolar;
 axios.get('https://criptoya.com/api/dolar')
 .then(function (response) {
   // handle success
-  console.log(response.data.blue);
+ // console.log(response.data.blue);
+  localStorage.dolar1=response.data.blue;
   return dolarc= response.data;
 })
 .catch(function (error) {
@@ -36,4 +39,6 @@ function dolarhoy() {
 function dolarchoy() {
     console.log(dolarc);
 }
+
+
 
