@@ -8,22 +8,22 @@ $title = "Contacto";
   <?php echo $title ?>
 </title>
 
-<body>
+<body >
   <?php
   require('src/modules/nav.php');
   ?>
 
-  <div class="relative mt-8">
-    <div class="bg-center	bg-cover bg-yellow-100 -z-10 h-screenfullh flex justify-center md:items-end flex-col md:flex-row bg-fixed ">
+  <div class="relative   mt-8">
+    <div class=" bg-center bg-map bg-cover -z-10 h-screenfullh flex justify-center md:items-end flex-col md:flex-row bg-fixed select-none object-top">
       <div
-        class="grid grid-cols-1 md:grid-cols-3 bg-gradient-to-t md:from-gray-700 from-50% md:via-transparent via-50% w-full justify-items-center">
-        <div class=" bg-slate-50 h-40 w-60 md:shadow-2xl shadow-slate-950 my-2">1</div>
-        <div class=" bg-slate-50 h-40 w-60 md:shadow-2xl shadow-slate-950 my-2">2</div>
-        <div class=" bg-slate-50 h-40 w-60 md:shadow-2xl shadow-slate-950 my-2">3</div>
+        class="grid select-none grid-cols-1 md:grid-cols-3 bg-gradient-to-t md:from-gray-700 from-50% md:via-transparent via-50% w-full justify-items-center z-20">
+        <div class="select-none  bg-gradient-to-t from-slate-50 via-slate-100 via-50% to-slate-50/90 h-40 w-60 md:shadow-2xl shadow-slate-950 my-2 flex justify-center items-center"><p class="text-center">Envio a todo el pais</p></div>
+        <div class="select-none  bg-gradient-to-t from-slate-50 via-slate-100 via-50% to-slate-50/90 h-40 w-60 md:shadow-2xl shadow-slate-950 my-2 flex justify-center items-center"><p class="text-center">envio en menos de 24 horas en CABA</p></div>
+        <div class="select-none  bg-gradient-to-t from-slate-50 via-slate-100 via-50% to-slate-50/90 h-40 w-60 md:shadow-2xl shadow-slate-950 my-2 flex justify-center items-center"><p class="text-center">aceptamos todos los medios de pago</p></div>
       </div> 
     </div>
   </div>
-  <div class="container flex justify-center items-center h-screen">
+  <div class="container flex justify-center to-slate-50  items-center h-screen">
         <form class="flex flex-col w-5/12"> 
           <div class="flex flex-col mt-8" tabindex="1">
             <label  for="username">

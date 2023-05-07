@@ -63,6 +63,7 @@ module.exports = {
     },
     backgroundImage:{
       'texture1':'url("http://localhost/programacion_web_2/src/imagenes_example/texture1.png")',
+      'map':'url("http://localhost/programacion_web_2/src/interface/mapa.png")',
       'textura_beta':'url("http://localhost/programacion_web_2/src/imagenes_example/600X600.png")',
     },
     colors:{
