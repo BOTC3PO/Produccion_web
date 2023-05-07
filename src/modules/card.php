@@ -12,6 +12,7 @@ for ($i=0; $i < $cards; $i++) {
       </div>
       <div class="flex justify-center flex-col items-center">
         <img class="" src="src/imagenes_example/600X600.png" alt="" srcset="" />
+        <img class="w-4/12 absolute self-start top-11 left-1" src="src/imagenes_example/600X600.png" alt="" srcset="" />
         <!--<p class="text-center my-0">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore hic laudantium facere fugit aut, distinctio doloremque, mollitia magni libero repudiandae quidem corporis? Ad quidem ipsum ducimus inventore, aspernatur pariatur nesciunt.
         </p>-->
