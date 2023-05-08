@@ -26,32 +26,32 @@ $producto_titulo = $titulo[$id];
   <div>
 
 
-    <div class="grid md:grid-cols-3 grid-cols-2 text-center">
+    <div class="grid md:grid-cols-4 lg:grid-cols-3 grid-cols-2 text-center">
 
-      <div class="col-span-2 mb-4 flex justify-center flex-col">
+      <div class="col-span-2  lg:col-span-2 mb-4 flex justify-center flex-col">
         <h2 class="text-xl block md:hidden mb-4">
           <?php echo $producto_titulo ?>
         </h2>
-        <img src="<?php echo $dir_producto .''.$producto[$id] .'.jpg' ?>" alt="" srcset="">
+        <img class="w-full" src="<?php echo $dir_producto .''.$producto[$id] .'.jpg' ?>" alt="" srcset="">
         <div>
 
         </div>
       </div>
-      <div class="flex flex-col items-center justify-evenly col-span-2 md:col-span-1 h-screen2 md:h-screen">
+      <div class="flex flex-col items-center justify-evenly col-span-2 md:col-span-2 lg:col-span-1 h-screen2 md:h-screen">
         <div class="flex flex-col items-center">
           <h2 class="text-xl invisible md:visible">
             <?php echo $producto_titulo ?>
           </h2>
-          <p class="min-w-full">
+          <p class="">
             <br>
           </p>
-          <div class="flex justify-center items-center">
+          <div class="flex justify-center items-center ">
             <select name="combo" class="appearance-none border-0 focus:ring-0	shadow-lg focus:shadow-none m-0">
               <option class="ring-2  appearance-none">Ars</option>
               <option class="ring-2  appearance-none">Usd</option>
               <option class="ring-2  appearance-none ">Usdc</option>
             </select>
-            <input type="text" disabled class="border-0  m-3 pl-4 w-fit" value="<?php echo $precio[$id] ?>">
+            <input type="text" disabled class="border-0  mb-3 pl-4 w-fit" value="<?php echo $precio[$id] ?>">
           </div>
 
         </div>

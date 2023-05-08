@@ -18,6 +18,7 @@ $title = "login";
     <div class="flex justify-center items-center flex-col h-screen w-screen bg-gradient-to-r from-violet-500 to-cyan-500  ">
       <div class="shadow-2xl bg-stone-300/80 md:w-3/12 w-8/12 h-3/6 flex justify-center items-center flex-col">
         <form action="#" class="h-4/6 w-full flex justify-center items-center flex-col">
+          <h2 class="text-3xl">login</h2>
           <div class="flex flex-col w-10/12">
             <label for="user">usuario</label>
             <input type="text">
