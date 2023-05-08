@@ -250,7 +250,7 @@ input_1_poner.addEventListener("click", input_1_poner_1);
 const menu_usuariobutton = document.getElementById("carrito");
 
 const menu_usuariofuncion = () => {
-    document.location.href = "http://localhost/programacion_web_2/carrito.php";
+    document.location.href = "http://localhost/proyecto/carrito.php";
     console.log(true);
 }
 
@@ -268,24 +268,24 @@ const admin5 = document.getElementsByClassName("admin_5");
 
 
 const admin_send1 = () => {
-    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=1";
+    document.location.href = "http://localhost/proyecto/admin.php?adminp=1";
     console.log(true);
 }
 
 const admin_send2 = () => {
-    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=2";
+    document.location.href = "http://localhost/proyecto/admin.php?adminp=2";
     console.log(true);
 }
 const admin_send3 = () => {
-    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=3";
+    document.location.href = "http://localhost/proyecto/admin.php?adminp=3";
     console.log(true);
 }
 const admin_send4 = () => {
-    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=4";
+    document.location.href = "http://localhost/proyecto/admin.php?adminp=4";
     console.log(true);
 }
 const admin_send5 = () => {
-    document.location.href = "http://localhost/programacion_web_2/admin.php?adminp=5";
+    document.location.href = "http://localhost/proyecto/admin.php?adminp=5";
     console.log(true);
 }
 

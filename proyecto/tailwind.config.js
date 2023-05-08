@@ -62,9 +62,9 @@ module.exports = {
       '50':'300px'
     },
     backgroundImage:{
-      'texture1':'url("http://localhost/programacion_web_2/src/imagenes_example/texture1.png")',
-      'map':'url("http://localhost/programacion_web_2/src/interface/mapa.png")',
-      'textura_beta':'url("http://localhost/programacion_web_2/src/imagenes_example/600X600.png")',
+      'texture1':'url("http://localhost/proyecto/src/imagenes_example/texture1.png")',
+      'map':'url("http://localhost/proyecto/src/interface/mapa.png")',
+      'textura_beta':'url("http://localhost/proyecto/src/imagenes_example/600X600.png")',
       'teclado':'url(https://files.coolermaster.com/product/masterkeys-lite-l/img/key1.gif)',
     },
     colors:{
